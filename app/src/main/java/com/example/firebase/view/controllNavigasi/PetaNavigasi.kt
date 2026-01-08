@@ -16,7 +16,10 @@ import com.example.firebase.view.route.DestinasiEntry
 import com.example.firebase.view.route.DestinasiHome
 
 @Composable
-fun DataSiswaApp(navController: NavHostController = rememberNavController(), modifier: Modifier){
+fun DataSiswaApp(
+    navController: NavHostController = rememberNavController(),
+    modifier: Modifier
+) {
     HostNavigasi(navController = navController)
 }
 
