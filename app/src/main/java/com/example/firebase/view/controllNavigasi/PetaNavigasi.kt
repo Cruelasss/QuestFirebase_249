@@ -9,9 +9,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.firebase.view.DetailSiswaScreen
+import com.example.firebase.view.EditSiswaScreen
 import com.example.firebase.view.EntrySiswaScreen
 import com.example.firebase.view.HomeScreen
 import com.example.firebase.view.route.DestinasiDetail
+import com.example.firebase.view.route.DestinasiEdit
 import com.example.firebase.view.route.DestinasiEntry
 import com.example.firebase.view.route.DestinasiHome
 
