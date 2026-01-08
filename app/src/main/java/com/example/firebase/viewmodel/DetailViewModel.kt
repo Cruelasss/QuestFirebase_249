@@ -7,3 +7,7 @@ sealed interface StatusUIDetail {
     object Error : StatusUIDetail
     object Loading : StatusUIDetail
 }
+class DetailViewModel(
+    savedStateHandle: SavedStateHandle,
+    private val repositorySiswa: RepositorySiswa
+) : ViewModel() {
