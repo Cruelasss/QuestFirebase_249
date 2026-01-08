@@ -57,3 +57,13 @@ fun DetailSiswaScreen(
                 navigateUp = navigateBack
             )
         },
+        floatingActionButton = {
+            val uiState = viewModel.statusUIDetail
+            FloatingActionButton(
+                onClick = {
+                    when (uiState) {
+                        is StatusUIDetail.Success ->
+                            navigateToEditItem(uiState.satusiswa!!.id.toInt().toLong())
+                        else -> {}
+                    }
+                },
