@@ -1,4 +1,6 @@
 package com.example.firebase.viewmodel
+import androidx.compose.runtime.getValue
+
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -35,9 +37,14 @@ RepositorySiswa
             UIStateSiswa(detailSiswa = detailSiswa, isEntryValid = validasiInput
                 (detailSiswa))
     }
+
     private fun validasiInput(uiState: DetailSiswa = uiStateSiswa.detailSiswa ): Boolean {
         return with(uiState) {
             nama.isNotBlank() && alamat.isNotBlank() && telpon.isNotBlank()
         }
     }
+
+    suspend fun editSatuSiswa(){
+        if (validasiInput(uiStateSiswa.detailSiswa)){
+            try {
 }
