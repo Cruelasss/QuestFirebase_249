@@ -1,5 +1,6 @@
 package com.example.firebase.repositori
 
+
 import com.example.firebase.modeldata.Siswa
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
@@ -53,5 +54,11 @@ class FirebaseRepositorySiswa : RepositorySiswa {
                     telpon = doc.getString("telpon") ?: ""
                 )
             }
+        } catch (e: Exception) {
+            println("Gagal baca data siswa : ${e.message}")
+            null
+        }
+    }
+
     }
 }
